@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="ArenaQuiz.App.Views.ResultPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:ArenaQuiz.App.ViewModels"
+    x:DataType="vm:ResultViewModel"
+    BackgroundColor="{DynamicResource Background}"
+    Shell.NavBarIsVisible="False">
+
+    <VerticalStackLayout Padding="32" Spacing="24" VerticalOptions="Center">
+
+        <Label Text="{Binding HeadlineEmoji}"
+               FontSize="80"
+               HorizontalOptions="Center" />
+
+        <Label Text="{Binding Headline}"
+               FontSize="42"
+               FontAttributes="Bold"
+               TextColor="{DynamicResource TextPrimary}"
+               HorizontalOptions="Center" />
+
+        <Label Text="{Binding Summary}"
+               FontSize="20"
+               TextColor="{DynamicResource TextSecondary}"
+               HorizontalOptions="Center" />
+
+        <Border BackgroundColor="{DynamicResource Surface}"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 16"
+                Padding="24,16"
+                HorizontalOptions="Center">
+            <Label Text="{Binding CoinsEarnedText}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="{DynamicResource Secondary}"
+                   HorizontalOptions="Center" />
+        </Border>
+
+        <Button Text="Jogar de novo"
+                Command="{Binding GoHomeCommand}"
+                BackgroundColor="{DynamicResource Primary}"
+                TextColor="White"
+                FontSize="18"
+                FontAttributes="Bold"
+                HeightRequest="64"
+                CornerRadius="16"
+                Margin="0,32,0,0" />
+    </VerticalStackLayout>
+</ContentPage>

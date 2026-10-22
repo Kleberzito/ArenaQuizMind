@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="ArenaQuiz.App.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:ArenaQuiz.App.ViewModels"
+    x:DataType="vm:HomeViewModel"
+    BackgroundColor="{DynamicResource Background}"
+    Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,*,Auto" Padding="24">
+
+        <!-- Cabeçalho com saldo -->
+        <HorizontalStackLayout Grid.Row="0" HorizontalOptions="End" Spacing="8">
+            <Label Text="🪙" FontSize="24" VerticalOptions="Center" />
+            <Label Text="{Binding TotalCoins}"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="{DynamicResource Secondary}"
+                   VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <!-- Título e botões -->
+        <VerticalStackLayout Grid.Row="1" VerticalOptions="Center" Spacing="32">
+            <Label Text="Arena Quiz"
+                   FontSize="48"
+                   FontAttributes="Bold"
+                   TextColor="{DynamicResource TextPrimary}"
+                   HorizontalOptions="Center" />
+            <Label Text="Mind"
+                   FontSize="24"
+                   FontAttributes="Italic"
+                   TextColor="{DynamicResource TextSecondary}"
+                   HorizontalOptions="Center"
+                   Margin="0,-20,0,0" />
+
+            <Button Text="Modo Clássico"
+                    Command="{Binding PlayClassicCommand}"
+                    BackgroundColor="{DynamicResource Primary}"
+                    TextColor="White"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    HeightRequest="72"
+                    CornerRadius="16"
+                    Margin="0,32,0,0" />
+
+            <Button Text="Escolher Tema"
+                    Command="{Binding PlayThemesCommand}"
+                    BackgroundColor="{DynamicResource Secondary}"
+                    TextColor="{DynamicResource Background}"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    HeightRequest="72"
+                    CornerRadius="16" />
+        </VerticalStackLayout>
+
+        <!-- Rodapé -->
+        <VerticalStackLayout Grid.Row="2" Spacing="8">
+            <Label Text="v0.1.0"
+           FontSize="12"
+           TextColor="{DynamicResource TextSecondary}"
+           HorizontalOptions="Center" />
+            <Button Text="Sair"
+            Command="{Binding ExitCommand}"
+            BackgroundColor="Transparent"
+            TextColor="{DynamicResource TextSecondary}"
+            BorderColor="{DynamicResource TextSecondary}"
+            BorderWidth="1"
+            FontSize="14"
+            HeightRequest="40"
+            CornerRadius="8"
+            HorizontalOptions="Center"
+            WidthRequest="120" />
+        </VerticalStackLayout>
+        
+    </Grid>
+</ContentPage>

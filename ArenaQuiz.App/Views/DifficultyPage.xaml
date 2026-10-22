@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="ArenaQuiz.App.Views.DifficultyPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:ArenaQuiz.App.ViewModels"
+    x:DataType="vm:DifficultyViewModel"
+    BackgroundColor="{DynamicResource Background}"
+    Title="Dificuldade">
+
+    <VerticalStackLayout Padding="24" Spacing="16" VerticalOptions="Center">
+
+        <Border BackgroundColor="{DynamicResource Surface}" StrokeThickness="0"
+                StrokeShape="RoundRectangle 16" Padding="20">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding StartCommand}" CommandParameter="Easy" />
+            </Border.GestureRecognizers>
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Fácil" FontSize="24" FontAttributes="Bold"
+                       TextColor="{DynamicResource Accent}" />
+                <Label Text="{Binding EasyInfo}" FontSize="14"
+                       TextColor="{DynamicResource TextSecondary}" />
+            </VerticalStackLayout>
+        </Border>
+
+        <Border BackgroundColor="{DynamicResource Surface}" StrokeThickness="0"
+                StrokeShape="RoundRectangle 16" Padding="20">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding StartCommand}" CommandParameter="Medium" />
+            </Border.GestureRecognizers>
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Médio" FontSize="24" FontAttributes="Bold"
+                       TextColor="{DynamicResource Secondary}" />
+                <Label Text="{Binding MediumInfo}" FontSize="14"
+                       TextColor="{DynamicResource TextSecondary}" />
+            </VerticalStackLayout>
+        </Border>
+
+        <Border BackgroundColor="{DynamicResource Surface}" StrokeThickness="0"
+                StrokeShape="RoundRectangle 16" Padding="20">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding StartCommand}" CommandParameter="Hard" />
+            </Border.GestureRecognizers>
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Difícil" FontSize="24" FontAttributes="Bold"
+                       TextColor="{DynamicResource Danger}" />
+                <Label Text="{Binding HardInfo}" FontSize="14"
+                       TextColor="{DynamicResource TextSecondary}" />
+            </VerticalStackLayout>
+        </Border>
+
+    </VerticalStackLayout>
+</ContentPage>

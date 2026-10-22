@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="ArenaQuiz.App.Views.MatchPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:ArenaQuiz.App.ViewModels"
+    x:DataType="vm:MatchViewModel"
+    BackgroundColor="{DynamicResource Background}"
+    Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,Auto,*,Auto,Auto" Padding="16" RowSpacing="12">
+
+        <!-- Barra superior: erros | progresso | moedas -->
+        <Grid Grid.Row="0" ColumnDefinitions="Auto,*,Auto">
+            <HorizontalStackLayout Grid.Column="0" Spacing="6">
+                <Label Text="❌" FontSize="18" />
+                <Label Text="{Binding WrongAnswers, StringFormat='{0}/3'}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="{DynamicResource Danger}"
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <Label Grid.Column="1"
+               Text="{Binding ProgressText}"
+               FontSize="16"
+               TextColor="{DynamicResource TextSecondary}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+            <HorizontalStackLayout Grid.Column="2" Spacing="6">
+                <Label Text="🪙" FontSize="18" />
+                <Label Text="{Binding CoinsInMatch}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="{DynamicResource Secondary}"
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Grid>
+
+        <!-- Pergunta -->
+        <Border Grid.Row="1"
+            BackgroundColor="{DynamicResource Surface}"
+            StrokeThickness="0"
+            StrokeShape="RoundRectangle 16"
+            Padding="20">
+            <Label Text="{Binding QuestionText}"
+               FontSize="20"
+               TextColor="{DynamicResource TextPrimary}"
+               LineBreakMode="WordWrap" />
+        </Border>
+
+        <!-- Opções -->
+        <VerticalStackLayout Grid.Row="2" Spacing="10" VerticalOptions="Center">
+            <Button Text="{Binding OptionAText}"
+                Command="{Binding SelectOptionCommand}"
+                CommandParameter="0"
+                BackgroundColor="{Binding OptionABg}"
+                TextColor="{DynamicResource TextPrimary}"
+                FontSize="16"
+                HeightRequest="60"
+                CornerRadius="12"
+                HorizontalOptions="Fill" />
+            <Button Text="{Binding OptionBText}"
+                Command="{Binding SelectOptionCommand}"
+                CommandParameter="1"
+                BackgroundColor="{Binding OptionBBg}"
+                TextColor="{DynamicResource TextPrimary}"
+                FontSize="16"
+                HeightRequest="60"
+                CornerRadius="12"
+                HorizontalOptions="Fill" />
+            <Button Text="{Binding OptionCText}"
+                Command="{Binding SelectOptionCommand}"
+                CommandParameter="2"
+                BackgroundColor="{Binding OptionCBg}"
+                TextColor="{DynamicResource TextPrimary}"
+                FontSize="16"
+                HeightRequest="60"
+                CornerRadius="12"
+                HorizontalOptions="Fill" />
+            <Button Text="{Binding OptionDText}"
+                Command="{Binding SelectOptionCommand}"
+                CommandParameter="3"
+                BackgroundColor="{Binding OptionDBg}"
+                TextColor="{DynamicResource TextPrimary}"
+                FontSize="16"
+                HeightRequest="60"
+                CornerRadius="12"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+
+        <!-- Barra de tempo (sem número, só progresso) -->
+        <ProgressBar Grid.Row="3"
+                 Progress="{Binding TimerProgress}"
+                 ProgressColor="{DynamicResource Secondary}"
+                 BackgroundColor="{DynamicResource Surface}"
+                 IsVisible="{Binding HasTimer}"
+                 HeightRequest="8" />
+
+        <!-- Desistir -->
+        <Button Grid.Row="4"
+            Text="Desistir"
+            Command="{Binding GiveUpCommand}"
+            BackgroundColor="Transparent"
+            TextColor="{DynamicResource Danger}"
+            BorderColor="{DynamicResource Danger}"
+            BorderWidth="1"
+            FontSize="14"
+            HeightRequest="40"
+            CornerRadius="8"
+            HorizontalOptions="Center"
+            WidthRequest="120" />
+    </Grid>
+</ContentPage>

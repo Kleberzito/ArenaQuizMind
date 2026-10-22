@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="ArenaQuiz.App.Views.ThemePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:ArenaQuiz.App.ViewModels"
+    x:Name="PageRoot"
+    x:DataType="vm:ThemeViewModel"
+    BackgroundColor="{DynamicResource Background}"
+    Title="Escolha o Tema">
+
+    <CollectionView ItemsSource="{Binding Themes}" Margin="16" SelectionMode="None">
+        <CollectionView.EmptyView>
+            <Label Text="Nenhum tema disponível."
+                   TextColor="{DynamicResource TextSecondary}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        </CollectionView.EmptyView>
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="x:String">
+                <Border BackgroundColor="{DynamicResource Surface}"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 16"
+                        Padding="20"
+                        Margin="0,8">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding Source={x:Reference PageRoot}, Path=BindingContext.SelectThemeCommand}"
+                            CommandParameter="{Binding .}" />
+                    </Border.GestureRecognizers>
+                    <Label Text="{Binding .}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{DynamicResource TextPrimary}"
+                           VerticalOptions="Center" />
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

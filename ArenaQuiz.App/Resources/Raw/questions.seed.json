@@ -1,0 +1,223 @@
+[
+  {
+    "text": "Qual é o maior planeta do Sistema Solar?",
+    "optionA": "Terra",
+    "optionB": "Júpiter",
+    "optionC": "Saturno",
+    "optionD": "Netuno",
+    "correctIndex": 1,
+    "theme": "Geral"
+  },
+  {
+    "text": "Quem pintou a Mona Lisa?",
+    "optionA": "Michelangelo",
+    "optionB": "Van Gogh",
+    "optionC": "Leonardo da Vinci",
+    "optionD": "Pablo Picasso",
+    "correctIndex": 2,
+    "theme": "Geral"
+  },
+  {
+    "text": "Qual é o idioma oficial do Brasil?",
+    "optionA": "Espanhol",
+    "optionB": "Português",
+    "optionC": "Inglês",
+    "optionD": "Francês",
+    "correctIndex": 1,
+    "theme": "Geral"
+  },
+  {
+    "text": "Quantos continentes existem?",
+    "optionA": "5",
+    "optionB": "6",
+    "optionC": "7",
+    "optionD": "8",
+    "correctIndex": 2,
+    "theme": "Geral"
+  },
+
+  {
+    "text": "Em que ano o Brasil proclamou sua independência?",
+    "optionA": "1808",
+    "optionB": "1822",
+    "optionC": "1889",
+    "optionD": "1500",
+    "correctIndex": 1,
+    "theme": "História"
+  },
+  {
+    "text": "Quem foi o primeiro presidente do Brasil?",
+    "optionA": "Getúlio Vargas",
+    "optionB": "Dom Pedro II",
+    "optionC": "Deodoro da Fonseca",
+    "optionD": "Juscelino Kubitschek",
+    "correctIndex": 2,
+    "theme": "História"
+  },
+  {
+    "text": "Em que século ocorreu a Revolução Francesa?",
+    "optionA": "Século XVII",
+    "optionB": "Século XVIII",
+    "optionC": "Século XIX",
+    "optionD": "Século XX",
+    "correctIndex": 1,
+    "theme": "História"
+  },
+  {
+    "text": "Qual civilização construiu as pirâmides de Gizé?",
+    "optionA": "Grega",
+    "optionB": "Romana",
+    "optionC": "Egípcia",
+    "optionD": "Maia",
+    "correctIndex": 2,
+    "theme": "História"
+  },
+
+  {
+    "text": "Qual é a fórmula química da água?",
+    "optionA": "CO2",
+    "optionB": "H2O",
+    "optionC": "O2",
+    "optionD": "NaCl",
+    "correctIndex": 1,
+    "theme": "Ciências"
+  },
+  {
+    "text": "Qual é o maior órgão do corpo humano?",
+    "optionA": "Fígado",
+    "optionB": "Cérebro",
+    "optionC": "Pele",
+    "optionD": "Pulmão",
+    "correctIndex": 2,
+    "theme": "Ciências"
+  },
+  {
+    "text": "Qual partícula tem carga negativa?",
+    "optionA": "Próton",
+    "optionB": "Nêutron",
+    "optionC": "Elétron",
+    "optionD": "Fóton",
+    "correctIndex": 2,
+    "theme": "Ciências"
+  },
+  {
+    "text": "Qual é o planeta conhecido como Planeta Vermelho?",
+    "optionA": "Vênus",
+    "optionB": "Marte",
+    "optionC": "Júpiter",
+    "optionD": "Mercúrio",
+    "correctIndex": 1,
+    "theme": "Ciências"
+  },
+
+  {
+    "text": "Qual é o maior país da América do Sul?",
+    "optionA": "Argentina",
+    "optionB": "Brasil",
+    "optionC": "Peru",
+    "optionD": "Colômbia",
+    "correctIndex": 1,
+    "theme": "Geografia"
+  },
+  {
+    "text": "Qual é o rio mais extenso do mundo?",
+    "optionA": "Nilo",
+    "optionB": "Amazonas",
+    "optionC": "Mississippi",
+    "optionD": "Yangtzé",
+    "correctIndex": 1,
+    "theme": "Geografia"
+  },
+  {
+    "text": "Qual é a capital da França?",
+    "optionA": "Londres",
+    "optionB": "Berlim",
+    "optionC": "Paris",
+    "optionD": "Roma",
+    "correctIndex": 2,
+    "theme": "Geografia"
+  },
+  {
+    "text": "Qual é o oceano que banha a costa do Brasil?",
+    "optionA": "Pacífico",
+    "optionB": "Índico",
+    "optionC": "Atlântico",
+    "optionD": "Ártico",
+    "correctIndex": 2,
+    "theme": "Geografia"
+  },
+
+  {
+    "text": "Quantos jogadores tem um time de futebol em campo?",
+    "optionA": "9",
+    "optionB": "10",
+    "optionC": "11",
+    "optionD": "12",
+    "correctIndex": 2,
+    "theme": "Esportes"
+  },
+  {
+    "text": "Em qual esporte se usa uma raquete e um volante?",
+    "optionA": "Tênis",
+    "optionB": "Badminton",
+    "optionC": "Squash",
+    "optionD": "Ping-pong",
+    "correctIndex": 1,
+    "theme": "Esportes"
+  },
+  {
+    "text": "Quantos anéis tem o símbolo olímpico?",
+    "optionA": "3",
+    "optionB": "4",
+    "optionC": "5",
+    "optionD": "6",
+    "correctIndex": 2,
+    "theme": "Esportes"
+  },
+  {
+    "text": "Qual país sediou a Copa do Mundo de 2014?",
+    "optionA": "África do Sul",
+    "optionB": "Brasil",
+    "optionC": "Rússia",
+    "optionD": "Alemanha",
+    "correctIndex": 1,
+    "theme": "Esportes"
+  },
+
+  {
+    "text": "Quem dirigiu o filme 'Titanic' (1997)?",
+    "optionA": "Steven Spielberg",
+    "optionB": "James Cameron",
+    "optionC": "Christopher Nolan",
+    "optionD": "Martin Scorsese",
+    "correctIndex": 1,
+    "theme": "Entretenimento"
+  },
+  {
+    "text": "Qual banda gravou o álbum 'Abbey Road'?",
+    "optionA": "The Rolling Stones",
+    "optionB": "The Beatles",
+    "optionC": "Queen",
+    "optionD": "Pink Floyd",
+    "correctIndex": 1,
+    "theme": "Entretenimento"
+  },
+  {
+    "text": "Qual é o nome do personagem principal de 'The Legend of Zelda'?",
+    "optionA": "Zelda",
+    "optionB": "Link",
+    "optionC": "Ganon",
+    "optionD": "Navi",
+    "correctIndex": 1,
+    "theme": "Entretenimento"
+  },
+  {
+    "text": "Qual streaming produziu a série 'Stranger Things'?",
+    "optionA": "Disney+",
+    "optionB": "Amazon Prime",
+    "optionC": "Netflix",
+    "optionD": "HBO Max",
+    "correctIndex": 2,
+    "theme": "Entretenimento"
+  }
+]
